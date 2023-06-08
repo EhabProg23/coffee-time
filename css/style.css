@@ -1015,6 +1015,8 @@ a {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: var(--sec-color);
+    overflow: hidden;
+
 }
 
 .reviews .container {
@@ -1090,6 +1092,8 @@ a {
     position: relative;
     padding-top: 120px;
     padding-bottom: 120px;
+    overflow: hidden;
+
 }
 
 .opening-times .container {
@@ -1125,6 +1129,8 @@ a {
     background-color: var(--sec-color);
     padding-top: 50px;
     padding-bottom: 50px;
+    overflow: hidden;
+
 }
 
 .branches .main-heading {
