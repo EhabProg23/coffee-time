@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Start Variables */
 
 :root {
@@ -10,7 +17,6 @@
 }
 
 /* End Variables */
-
 
 /* Start Global Rules */
 
@@ -107,7 +113,6 @@ a {
     margin-top: 30px;
     display: block;
     cursor: pointer;
-    z-index: 998;
     position: relative;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -376,19 +381,20 @@ a {
 
 .wave {
     position: absolute;
-    width: 100%;
+    width: 115%;
 }
 
 .top {
-    left: 0;
-    bottom: 0;
+    left: -20px;
+    bottom: -5px;
 }
 
 .bottom {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    top: 0;
+    top: -5px;
+
 }
 
 /* End Main Components */
@@ -458,6 +464,10 @@ a {
         position: absolute;
         -webkit-box-shadow: 0 12px var(--third-color);
         box-shadow: 0 12px var(--third-color);
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+
     }
 
     .header .toogle-menue::after {
@@ -469,6 +479,10 @@ a {
         -ms-transform: translateY(12px);
         transform: translateY(12px);
         position: absolute;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+
     }
 
     .header .container.active .toogle-menue::after {
@@ -499,6 +513,10 @@ a {
         flex-direction: column;
         width: 100%;
         height: calc(100vh - var(--header-height));
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+
     }
 
     .header .container.active .links {
@@ -512,12 +530,15 @@ a {
         padding-bottom: 30px;
     }
 }
-
 .header .container .links a {
     font-family: var(--sec-font);
     font-weight: bold;
     font-size: 18px;
     padding-bottom: 15px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+
 }
 
 .header .container .links a:hover {
@@ -566,31 +587,10 @@ a {
     overflow: hidden;
 }
 
-@media only screen and (max-width: 768px) {
-    .landing .container {
-        text-align: center;
-        margin-top: 50px;
-    }
-}
-
 .landing .text {
     width: 45%;
 }
 
-@media only screen and (max-width: 768px) {
-    .landing .text {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .landing .btn {
-        display: inline-block;
-    }
-}
 
 .landing .photo {
     position: absolute;
@@ -608,12 +608,26 @@ a {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media  (max-width: 767px) {
+    .landing .container {
+        text-align: center;
+    }
+
+    .landing .text {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    .landing .btn {
+        display: inline-block;
+    }
     .landing .photo {
         display: none;
     }
 }
-
+@media only screen and (max-width: 600px) {
+}
 
 /* End Landing */
 /* start Black Coffee */
@@ -621,6 +635,7 @@ a {
     overflow: hidden;
     background-color: var(--sec-color);
     position: relative;
+    overflow: hidden;
 }
 
 .black-coffee .container {
@@ -675,40 +690,52 @@ a {
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .black-coffee .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    
     }
-
 
     .black-coffee .left .main-heading {
         font-size: 60px;
+        width: 100%;
     }
 
     .black-coffee .left .btn {
         font-size: 15px;
+        margin-top: 0;
     }
 
 
+    .black-coffee .right  {
+        width: 100%;
+    }
     .black-coffee .right .photo {
         display: none;
     }
 
     .black-coffee .right .text {
-        margin: 0;
+        margin-top: 30px;
+        width: 100%;
     }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 600px) and (max-width: 767px) {
     .black-coffee .right {
         width: 80%;
     }
 
     .black-coffee .right .text {
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -780,31 +807,41 @@ a {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .hot-coffee {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .hot-coffee .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left:10px;
+        padding-right: 10px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
     .hot-coffee .left .main-heading {
         font-size: 60px;
+        width: 100%;
     }
 
     .hot-coffee .left .btn {
         font-size: 15px;
+        margin-top: 0;
     }
 
 
+    .hot-coffee .right  {
+        width: 100%;
+    }
     .hot-coffee .right .photo {
         display: none;
     }
 
     .hot-coffee .right .text {
-        margin: 0;
+        margin-top: 30px;
+        width: 100%;
     }
 
 }
@@ -816,11 +853,11 @@ a {
         padding-bottom: 50px;
     }
 
-    .hot-coffee .left {
-        width: 80%;
+    .hot-coffee .right {
+        width: 70%;
     }
 
-    .hot-coffee .left .text {
+    .hot-coffee .right .text {
         width: 100%;
     }
 }
@@ -887,26 +924,36 @@ a {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .white-coffee .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
     .white-coffee .left .main-heading {
         font-size: 60px;
+        width: 100%;
     }
 
     .white-coffee .left .btn {
         font-size: 15px;
+        margin-top: 0;
     }
 
 
+    .white-coffee .right  {
+        width: 100%;
+    }
     .white-coffee .right .photo {
         display: none;
     }
 
     .white-coffee .right .text {
-        margin: 0;
+        margin-top: 30px;
+        width: 100%;
     }
 
 }
@@ -918,7 +965,7 @@ a {
     }
 
     .white-coffee .right .text {
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -1255,8 +1302,13 @@ a {
 
 @media only screen and (max-width: 768px) {
     .footer .up {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 }
 
@@ -1276,6 +1328,8 @@ a {
 
 @media only screen and (max-width: 768px) {
     .footer .up .logo {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         margin-bottom: 30px;
     }
@@ -1467,11 +1521,11 @@ a {
 
 .footer .down .social .fa-whatsapp:hover {
     background:
-        -webkit-gradient(linear, left top, left bottom, from(#25d366), to(#25d366)) 14% 84%/16% 16% no-repeat,
-        radial-gradient(#25d366 60%, transparent 0);
-    background:
         -o-linear-gradient(#25d366, #25d366) 14% 84%/16% 16% no-repeat,
         -o-radial-gradient(#25d366 60%, transparent 0);
+    background:
+        -webkit-gradient(linear, left top, left bottom, from(#25d366), to(#25d366)) 14% 84%/16% 16% no-repeat,
+        radial-gradient(#25d366 60%, transparent 0);
     background:
         linear-gradient(#25d366, #25d366) 14% 84%/16% 16% no-repeat,
         radial-gradient(#25d366 60%, transparent 0);
@@ -1498,8 +1552,8 @@ a {
     position: absolute;
     width: 40%;
     height: 2px;
-    -webkit-animation: crazy 0.9s infinite forwards;
-    animation: crazy 0.9s infinite forwards;
+    -webkit-animation: crazy 2s infinite forwards;
+    animation: crazy 2s infinite forwards;
 }
 
 .going-to-top::after {
@@ -1529,55 +1583,29 @@ a {
 
 @-webkit-keyframes crazy {
     0% {
-        top: 20%;
+        top: 25%;
     }
 
-    20% {
-        top: 40%;
+    50% {
+        top: 50%;
     }
-
-    40% {
-        top: 60%;
-    }
-
-    60% {
-        top: 40%;
-    }
-
-    80% {
-        top: 20%;
-    }
-
     100% {
-        top: 60%;
+        top: 25%;
     }
 }
 
 
 @keyframes crazy {
     0% {
-        top: 20%;
+        top: 25%;
     }
 
-    20% {
-        top: 40%;
+    50% {
+        top: 50%;
     }
-
-    40% {
-        top: 60%;
-    }
-
-    60% {
-        top: 40%;
-    }
-
-    80% {
-        top: 20%;
-    }
-
     100% {
-        top: 60%;
-    }
+        top: 25%;
+    }   
 }
 
 /* End Going To Top */
