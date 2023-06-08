@@ -117,6 +117,7 @@ a {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    z-index: 999;
 }
 
 .btn:hover {
